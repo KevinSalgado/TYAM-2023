@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/funciones"
+            android:textColor="@color/black"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginStart="2dp"
+            android:textSize="20sp"
+            />
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/opciones_funciones"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radioSIN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/SIN"
+            android:layout_weight="1"/>
+
+        <RadioButton
+            android:id="@+id/radioCOS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/COS"
+            android:layout_weight="1"/>
+
+        <RadioButton
+            android:id="@+id/radioTAN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/TAN"
+            android:layout_weight="1"
+            android:checked="true"/> <!-- delete this attribute, only for design purpose -->
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/grados"
+            android:textColor="@color/black"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginStart="2dp"
+            android:textSize="20sp"
+            />
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/opciones_grados"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <RadioButton
+            android:id="@+id/radio45"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cuarenta_y_cinco"
+            android:layout_margin="10dp"
+            android:checked="true"/> <!-- delete this attribute, only for design purpose -->
+
+        <RadioButton
+            android:id="@+id/radio90"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/noventa"
+            android:layout_margin="10dp"/>
+
+        <RadioButton
+            android:id="@+id/radio180"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ciento_ochenta"
+            android:layout_margin="10dp"/>
+    </RadioGroup>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/angulo_seleccionado"
+        android:src="@mipmap/img_45"/> <!-- delete this attribute, only for design purpose -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/resultado"
+            android:textColor="@color/light_gray"
+            android:textSize="20sp"
+            android:layout_marginEnd="10dp"/>
+
+        <TextView
+            android:id="@+id/resultado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="20sp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

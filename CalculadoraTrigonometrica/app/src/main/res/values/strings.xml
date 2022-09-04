@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">CalculadoraTrigonometrica</string>
+    <string name="funciones">Funciones</string>
+    <string name="SIN">SIN</string>
+    <string name="COS">COS</string>
+    <string name="TAN">TAN</string>
+    <string name="grados">Grados</string>
+    <string name="cuarenta_y_cinco">45</string>
+    <string name="noventa">90</string>
+    <string name="ciento_ochenta">180</string>
+    <string name="angulo_seleccionado">Imagen correspondiente al ángulo seleccionado</string>
+    <string name="resultado">Resultado:</string>
+</resources>
