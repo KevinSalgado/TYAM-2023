@@ -46,8 +46,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/TAN"
-            android:layout_weight="1"
-            android:checked="true"/> <!-- delete this attribute, only for design purpose -->
+            android:layout_weight="1"/>
+        <!--android:checked="true"/>  delete this attribute, only for design purpose -->
     </RadioGroup>
 
     <LinearLayout
@@ -78,8 +78,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/cuarenta_y_cinco"
-            android:layout_margin="10dp"
-            android:checked="true"/> <!-- delete this attribute, only for design purpose -->
+            android:layout_margin="10dp"/>
+        <!--android:checked="true"/>  delete this attribute, only for design purpose -->
 
         <RadioButton
             android:id="@+id/radio90"
@@ -100,7 +100,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:contentDescription="@string/angulo_seleccionado"
-        android:src="@mipmap/img_45"/> <!-- delete this attribute, only for design purpose -->
+        android:src="@mipmap/img_45"/>  <!--delete this attribute, only for design purpose -->
 
     <LinearLayout
         android:layout_width="match_parent"

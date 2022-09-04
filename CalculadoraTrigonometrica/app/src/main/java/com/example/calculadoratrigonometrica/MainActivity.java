@@ -2,12 +2,15 @@ package com.example.calculadoratrigonometrica;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.CompoundButton;
 import android.widget.RadioButton;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 
@@ -16,13 +19,12 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 
-import androidx.annotation.Nullable;
-import androidx.lifecycle.ViewModelStore;
-import androidx.lifecycle.ViewModelStoreOwner;
 
 
-public class MainActivity extends Activity implements ViewModelStoreOwner {
+
+public class MainActivity extends  AppCompatActivity {
     private RadioButton edtSIN, edtCOS, edtTAN, edt45, edt90, edt180;
+    //private RadioGroup edtfunciones, edgrados;
     private static String TAG="calculadoratrigonometrica";
     FormViewModel formViewModel;
 
@@ -33,6 +35,7 @@ public class MainActivity extends Activity implements ViewModelStoreOwner {
         setContentView(R.layout.activity_main); // load the activity_main.xml content
 
         formViewModel = new ViewModelProvider (this).get (FormViewModel.class);
+
 
         edtTAN = findViewById(R.id.radioTAN);
         edtTAN.addTextChangedListener(new TextWatcher() {
@@ -48,7 +51,7 @@ public class MainActivity extends Activity implements ViewModelStoreOwner {
 
             @Override
             public void afterTextChanged(Editable editable) {
-                formViewModel.TAN = editable.toString();
+                formViewModel.TAN = editable.equals(true);
             }
         });
 
@@ -66,7 +69,7 @@ public class MainActivity extends Activity implements ViewModelStoreOwner {
 
             @Override
             public void afterTextChanged(Editable editable) {
-                formViewModel.SIN = editable.toString();
+                formViewModel.SIN = editable.equals(true);
             }
         });
 
@@ -84,7 +87,7 @@ public class MainActivity extends Activity implements ViewModelStoreOwner {
 
             @Override
             public void afterTextChanged(Editable editable) {
-                formViewModel.COS = editable.toString();
+                formViewModel.COS = editable.equals(true);
             }
         });
 
@@ -102,7 +105,7 @@ public class MainActivity extends Activity implements ViewModelStoreOwner {
 
             @Override
             public void afterTextChanged(Editable editable) {
-                formViewModel.ff = editable.toString();
+                formViewModel.ff = editable.equals(true);
             }
         });
 
@@ -120,7 +123,7 @@ public class MainActivity extends Activity implements ViewModelStoreOwner {
 
             @Override
             public void afterTextChanged(Editable editable) {
-                formViewModel.nc = editable.toString();
+                formViewModel.nc = editable.equals(true);
             }
         });
 
@@ -138,7 +141,7 @@ public class MainActivity extends Activity implements ViewModelStoreOwner {
 
             @Override
             public void afterTextChanged(Editable editable) {
-                formViewModel.ohe = editable.toString();
+                formViewModel.ohe = editable.equals(true);
             }
         });
     }
@@ -154,12 +157,12 @@ public class MainActivity extends Activity implements ViewModelStoreOwner {
         super.onResume ();
         Log.d (TAG, "OnResume");
 
-        edtTAN.setText(formViewModel.TAN);
-        edtCOS.setText(formViewModel.COS);
-        edtSIN.setText(formViewModel.SIN);
-        edt45.setText(formViewModel.ff);
-        edt90.setText(formViewModel.nc);
-        edt180.setText(formViewModel.ohe);
+        edtTAN.setChecked(formViewModel.TAN);
+        edtCOS.setChecked(formViewModel.COS);
+        edtSIN.setChecked(formViewModel.SIN);
+        edt45.setChecked(formViewModel.ff);
+        edt90.setChecked(formViewModel.nc);
+        edt180.setChecked(formViewModel.ohe);
     }
 
     @Override
@@ -199,9 +202,9 @@ public class MainActivity extends Activity implements ViewModelStoreOwner {
 
     }
 
-    @NonNull
+    /*@NonNull
     @Override
     public ViewModelStore getViewModelStore() {
         return null;
-    }
+    }*/
 }
